@@ -93,7 +93,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -283,7 +283,7 @@ MonoBehaviour:
   enemyType: Chaser
   health: 0
   healthUI: {fileID: 8145272985478033826}
-  scoreValue: 200
+  scoreValue: 400
 --- !u!114 &2708154108629519860
 MonoBehaviour:
   m_ObjectHideFlags: 0

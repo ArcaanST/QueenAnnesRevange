@@ -16,7 +16,7 @@ public class EnemyChaserExplode : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             meEnemy.player.TakeDamage(meEnemy.chaserDamage);
-            meEnemy.TakeDamage(100f);
+            meEnemy.TakeDamage(meEnemy.maxHealth);
         }
     }
 }

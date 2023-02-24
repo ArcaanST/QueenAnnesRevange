@@ -52,10 +52,12 @@ public class EnemyAnimationStates : MonoBehaviour
         enemyAnimator.gameObject.transform.position = enemyMain.transform.position;
         enemyAnimator.gameObject.transform.localScale = new Vector3(1.4f, 1.4f, 1f);
         enemyAnimator.SetBool("Dead", true);
+        enemyMain.enabled = false;
         yield return new WaitForSeconds(0.5f);
+        Destroy(enemyMain.gameObject);
+        GameManager.gameManagerInstance.score += enemyMain.scoreValue;
+        SpawnManager.spawnManagerInstance.enemiesAmount -= 1;
         enemyAnimator.SetBool("Dead", false);
-        enemySpriteRenderer.color = new Color(0, 0, 0, 0);
-        UIManager.uiManagerInstance.GameOver();
     }
 
     public IEnumerator OnExplosionFrontal()

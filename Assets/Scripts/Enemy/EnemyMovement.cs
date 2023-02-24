@@ -31,10 +31,13 @@ public class EnemyMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        UpdateTargetDirection();
-        RotateTowardsTarget();
-        SetVelocity();
-        ObstacleAvoid();
+        if(enemyMain.health > 0)
+        {
+            UpdateTargetDirection();
+            RotateTowardsTarget();
+            SetVelocity();
+            ObstacleAvoid();
+        }
     }
 
     void UpdateTargetDirection()

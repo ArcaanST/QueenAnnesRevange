@@ -21,8 +21,7 @@ public class EnemyMain : MonoBehaviour
     [SerializeField]
     private GameObject healthUI;
 
-    [SerializeField]
-    float scoreValue;
+    public float scoreValue;
 
     private void Awake()
     {
@@ -36,9 +35,6 @@ public class EnemyMain : MonoBehaviour
         if (health <= 0)
         {
             StartCoroutine(enemyAnimationStates.OnDeath());
-            Destroy(this.gameObject);
-            GameManager.gameManagerInstance.score += scoreValue;
-            SpawnManager.spawnManagerInstance.enemiesAmount -= 1;
         }
     }
 
